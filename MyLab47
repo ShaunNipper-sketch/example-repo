@@ -1,0 +1,15 @@
+public class MyLab47 {
+  public static void main(String args[]) {
+    
+    int num = 1;
+    for (num = 1; num <= 20; num ++){
+        if (num % 2 == 0){
+            continue;
+        }
+        if (num == 15){
+            break;
+        }
+        System.out.println(num);
+    }
+  }
+}
