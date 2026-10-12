@@ -1,0 +1,14 @@
+public class MyLab45 {
+  public static void main(String args[]) {
+    int row = 1;
+    int col = 1;
+    int iteration = 0;
+    for (row = 1; row <= 5; row ++){
+        iteration = iteration + 1;
+        System.out.println("");
+        for(col = 1; col <= iteration; col++){
+            System.out.print("*");
+        }    
+    }
+  }
+}
