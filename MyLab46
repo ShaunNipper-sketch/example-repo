@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class MyLab46 {
+  public static void main(String args[]) {
+      
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter table size: ");
+    int tableSize = scanner.nextInt();
+    int row = 1;
+    int col = 1;
+ 
+    for (row = 1; row <= tableSize; row ++){
+        System.out.println();
+        for(col = 1; col <= tableSize; col++){
+            System.out.print((row * col) + "\t");
+        }    
+    }
+  }
+}
