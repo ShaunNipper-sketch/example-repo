@@ -1,0 +1,30 @@
+public class MyLab51 {
+  public static void main(String args[]) {
+    int[] nums = {2, 4, 6, 8};
+    int sum = 0;
+    int average = 0;
+    int largest = 0;
+    
+    System.out.print("Array elements: ");
+    for (int d = 0; d < nums.length; d++){
+        System.out.print(" " + nums[d]);
+    }
+    
+    System.out.println("");
+    
+    for (int s = 0; s < nums.length; s++){
+        sum = sum + nums[s];
+    }
+    System.out.println("Sum = " + sum);
+    
+    average = sum / nums.length;
+    System.out.println("average = "+ average);
+    
+    for (int a = 0; a < nums.length; a++){
+        if (largest < nums[a]);{
+            largest = nums[a];
+        }
+    }
+    System.out.println("Largest = " + largest);
+  }
+}
