@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class MyLab53 {
+  public static void main(String args[]) {
+    Scanner scanner = new Scanner (System.in);
+    int[] ratings = new int[10];
+    int sum = 0;
+    int highest = 0;
+    int lowest = 10;
+    int holding = 0;
+    int q = 1;
+    
+    for(int i = 0; i < ratings.length; i++){
+        System.out.print("Enter ratings for song " + q + ": ");
+        holding = scanner.nextInt();
+        if (holding <= 10 && holding >= 1){
+            ratings[i] = holding;
+            sum = sum + holding;
+            q++;
+        } else {
+            System.out.println("Invalid rating, please select a number between 1 and 10.");
+            i = i - 1;
+            q= q - 1;
+        }
+    }
+    
+    System.out.println("Playlist Rattings:");
+    for(int r = 0; r < ratings.length; r++){
+        System.out.print(ratings[r] + " ");
+    }
+    System.out.println("");
+    
+    System.out.print("highest Rating: ");
+    for(int h = 0; h < ratings.length; h++){
+        if (ratings[h] > highest){
+            highest = ratings[h];
+        }
+    }
+    System.out.println(highest);
+    
+    System.out.print("lowest Rating: ");
+    for(int l = 0; l < ratings.length; l++){
+        if (ratings[l] < lowest){
+            lowest = ratings[l];
+        }
+    }
+    System.out.println(lowest);
+    
+    double average = sum / ratings.length;
+    System.out.println("Average Rating: " + average);
+    
+  }
+}
