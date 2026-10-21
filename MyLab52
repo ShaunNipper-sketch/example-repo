@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class MyLab52 {
+  public static void main(String args[]) {
+    double price = 0.0;
+    double total = 0.0;
+    Scanner scanner = new Scanner (System.in);
+    
+    System.out.println("=== Online Checkout System ===");
+    while (price != -1){
+        System.out.print("Enter item price (-1 to finish): ");
+        price = scanner.nextDouble();
+     if (price != -1){
+        total = total + price;
+        }
+    }
+    if (total >= 100.0){
+        total = total * 0.9;
+    }
+    System.out.println("Final total: $" + total);
+  }
+}
