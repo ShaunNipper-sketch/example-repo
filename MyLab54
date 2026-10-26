@@ -1,0 +1,66 @@
+public class MyLab54 {
+  public static void main(String args[]) {
+    char[][] island = {
+    {'~', '~', 'T', '~', '~'},
+    {'T', '~', '~', '~', 'T'},
+    {'~', '~', 'T', '~', '~'},
+    {'~', 'T', '~', '~', '~'},
+    {'~', '~', '~', 'T', '~'}
+};
+int totalT = 0;
+int holding = 0;
+int rowT = 0;
+int display = 1;
+
+// Print map
+    System.out.println("Island Map:");
+    for(int row=0;row<island.length;row++){
+        for(int col=0; col<island[row].length;col++){
+            System.out.print(island[row][col]+ " ");
+        }
+        System.out.println();
+    }
+    
+//Total treasures
+    System.out.println("\nIsland Map:");
+        for(int row2=0;row2<island.length;row2++){
+            for(int col2=0; col2<island[row2].length;col2++){
+                if (island[row2][col2] == 'T'){
+                    totalT = totalT + 1;
+            }
+        }
+    }
+    System.out.println("Total Treasures: " + totalT);
+    
+//First Trasure location
+    System.out.println("\nFirst Treasure Found at ");
+    for(int row3=0;row3<island.length;row3++){
+        for(int col3=0; col3<island[row3].length;col3++){
+            if (island[row3][col3] == 'T'){
+                System.out.println("Row: " + row3 + " Column: " + col3);
+                holding = col3;
+                break;
+            }
+        }
+        if (island[row3][holding] == 'T'){
+            break;
+        }
+    }
+    
+// Treasures per row
+    System.out.println("\nIsland Map:");
+        for(int row4=0;row4<island.length;row4++){
+            for(int col4=0; col4<island[row4].length;col4++){
+                holding = col4;
+                if (island[row4][col4] == 'T'){
+                    rowT = rowT + 1;
+                    display = row4 + 1;
+                    System.out.println("Row " + display + " = " + rowT);
+                    break;
+            }
+        }
+        rowT = 0;
+    }
+    
+  }
+}
