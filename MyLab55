@@ -1,0 +1,45 @@
+public class MyLab55 {
+  public static void main(String args[]) {
+    int classTotal = 0;
+    int classAverage = 0;
+    int highestScore = 0;
+    int highestID = 0;
+    
+    int [][] students = {
+        {12345, 85, 90, 0},
+        {23456, 78, 88, 0},
+        {34567, 92, 95, 0},
+        {45678, 65, 70, 0},
+        {56789, 88, 80, 0}
+    };
+    for(int i = 0; i < students.length; i++){
+        students[i][3] = students[i][1]+students[i][2];
+        classTotal = classTotal + students[i][3];
+    }
+    classAverage = classTotal / students.length;
+    
+    System.out.println("Student grade report:");
+    System.out.println("");
+    System.out.println("ID\t\tMAT\tENG\tTotal");
+    System.out.println("---------------------");
+    
+    for(int row = 0; row < students.length; row++){
+        for(int col = 0; col < students[row].length; col++){
+            System.out.print(students[row][col] + "\t");
+            if (students[row][3] > highestScore){
+                highestScore = students[row][3];
+                highestID = students[row][0];
+            }
+        }
+        System.out.println();
+    }
+    
+    System.out.println();
+    System.out.println("Class Average: " + classAverage);
+    
+    System.out.println();
+    System.out.println("Highest Total Score");
+    System.out.println("Student ID: " + highestID);
+    System.out.println("Total Score: " + highestScore);
+  }
+}
