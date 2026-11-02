@@ -1,0 +1,39 @@
+public class MyLab61 {
+    // method for squareing calculation
+    public static int cube(int number){
+        return number * number;
+    }
+    //method for temperature conversion
+    public static double faToCe(double temp){
+        return (temp - 32) * 5 / 9;
+    }
+    //method for determining even numbers
+    public static boolean isEven(int number){
+        if (number % 2 == 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //method for calculating sales tax
+    public static double calcTax(double amount){
+        return amount * 1.06;
+    } 
+    //method forfinding the largest integer
+    public static int findLargest(int a, int b, int c){
+        if (a > b && a > c)
+            return a;
+        else if (b > a && b > c)
+            return b;
+        else
+            return c;
+    }
+    
+  public static void main(String args[]) {
+    System.out.println("Cube of 3: " + cube(3));
+        System.out.printf("68°F = %.2f°C%n", faToCe(68));
+        System.out.println("Is 10 even? " + isEven(10));
+        System.out.printf("Tax on $100: $%.2f%n", calcTax(100));
+        System.out.println("Largest number: " + findLargest(12, 45, 30));
+  }
+}
