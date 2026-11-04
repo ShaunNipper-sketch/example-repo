@@ -1,0 +1,42 @@
+public class MyLab62 {
+    
+    // method for finding highest score
+    public static int findHighest(int[] scores){
+        int highest = 0;
+        for(int i = 0; i < scores.length; i++){
+            if (highest < scores[i]){
+                highest = scores[i];
+            }
+        }
+        return highest;
+    }
+    
+    //method for counting amount of threat scores greater that 80.
+    public static int countCrit(int[] scores){
+        int count = 0;
+        for(int i = 0; i < scores.length; i++){
+            if (scores[i] >= 80){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    //method for calculating average threat score
+    public static double calculateAverage(int[] scores){
+        double total = 0;
+        for(int i = 0; i < scores.length; i++){
+            total = total + scores[i];
+        }
+    double average = total / scores.length;
+    return average;
+    }
+    
+    public static void main(String args[]) {
+        int[] threatScores = {45, 82, 15, 93, 67, 28, 99, 54};
+        int highest = findHighest(threatScores);
+        System.out.println("Highest Threat Score: " + highest);
+        System.out.println("Critical Threats: " + countCrit(threatScores));
+        System.out.println("Average Threat Score: " + calculateAverage(threatScores));
+    }
+}
