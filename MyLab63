@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class MyLab63 {
+  public static void main(String args[]) {
+    double grade1 = 0;
+    double grade2 = 0;
+    double grade3 = 0;
+    double average = 0;
+    double gpa = 0;
+    double holding =0;
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("Enter grade 1: ");
+    holding = input.nextDouble();
+    if(holding < 0 || holding > 100){
+        System.out.println("invalid grade");
+    } else {
+        grade1 = holding;
+    }
+    System.out.print("Enter grade 2: ");
+    holding = input.nextDouble();
+    if(holding < 0 || holding > 100){
+        System.out.println("invalid grade");
+    } else {
+        grade2 = holding;
+    }
+    System.out.print("Enter grade 3: ");
+    holding = input.nextDouble();
+    if(holding < 0 || holding > 100){
+        System.out.println("invalid grade");
+    } else {
+        grade3 = holding;
+    }
+    
+    average = grade1 + grade2 + grade3;
+    average = average / 3;
+    System.out.println("");
+    System.out.println("Average Grade: " + average);
+    
+    gpa = (average / 100.0) * 4.0;
+    gpa = gpa * 100;
+    gpa = Math.round(gpa);
+    gpa = gpa / 100;
+    System.out.println("GPA: " + gpa);
+    
+    if(gpa >= 3.5){
+        System.out.println("Dean's List: Yes");
+    } else {
+        System.out.println("Dean's List: No");
+    }
+    input.close();
+  }
+}
