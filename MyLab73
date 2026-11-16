@@ -1,0 +1,54 @@
+import java.io.*;
+import java.util.Scanner;
+ 
+public class MyLab73{
+    public static void main(String[] args) throws Exception {
+ 
+        Scanner keyboard = new Scanner(System.in);
+        PrintWriter output = new PrintWriter("users.txt");
+        
+        String savedName = "e";
+        String savedPassword = "f";
+        String name = "a";
+        String password = "b";
+        String saved = "q";
+        boolean loginSuccessful = false;
+        
+        System.out.print("Username: ");
+        savedName = keyboard.nextLine();
+        System.out.print("Password: ");
+        savedPassword = keyboard.nextLine();
+        System.out.println(" ");
+        output.println(savedName);
+        output.println(savedPassword);
+        
+        System.out.println("Login");
+        System.out.println("***********");
+        System.out.print("Username: ");
+        name = keyboard.nextLine();
+        System.out.print("Password: ");
+        password = keyboard.nextLine();
+        
+        File file = new File("users.txt");
+        Scanner check = new Scanner(file);
+        
+        while (check.hasNext()){
+           saved = check.nextLine();
+           if(saved == name || saved == password){
+               loginSuccessful = true;
+           }
+        }
+        
+        if(loginSuccessful == true){
+            System.out.println("Login Successful");
+            System.out.println("Welcome " + name + "!");
+        } else {
+            System.out.println("Login Failed");
+            System.out.println("Wrong Username or Password.");
+        }
+        
+        output.close();
+        keyboard.close();
+        check.close();
+    }
+}
