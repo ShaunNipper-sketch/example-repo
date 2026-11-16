@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Scanner;
+ 
+public class MyLab72{
+    public static void main(String[] args) throws Exception {
+ 
+        Scanner keyboard = new Scanner(System.in);
+        PrintWriter output = new PrintWriter("users.txt");
+        
+        int userNum = 0;
+        String name = "a";
+        String password = "b";
+        
+        System.out.print("How many users? ");
+        userNum = keyboard.nextInt();
+        
+        for(int i = 0; i < userNum; i++){
+            int ittt = i + 1;
+            System.out.println("User " + ittt);
+            System.out.print("Username: ");
+            name = keyboard.next();
+            System.out.print("Password: ");
+            password = keyboard.next();
+            System.out.println(" ");
+            output.println(name + "," + password);
+        }
+        
+        output.close();
+        keyboard.close();
+    }
+}
