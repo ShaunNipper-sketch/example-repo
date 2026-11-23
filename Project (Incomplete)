@@ -1,7 +1,7 @@
-//find a way to handle the printing through a method instead of repeating code.
 import java.util.Scanner;
 
 public class MyStudentGradeAndAcidemicStandingSystem {
+    
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your student ID: ");
@@ -9,10 +9,60 @@ public class MyStudentGradeAndAcidemicStandingSystem {
         System.out.println("***************************************");
         
         //Each value will have 3 arrays a string array for the class names, an int array for numerical grades, and a cha array for letter grades
-        // No grades lower than 42
-        String [] names0 = {"ART101","BIOL101","CSCI101","GEOG101","HIST"};
+        //The letter grade can be calculated latter based on the number grades
+        // No grades lower than 56
+        char[] letters = {'A','A','A','A','A'};
+        
+        String [] names0 = {"ART101","BIOL101","CSCI101","GEOG101","HIST101"};
         int [] grades0 = {79, 90, 56, 92, 62};
-        char[] letters0 = {'A','A','A','A','A'};
+        
+        String [] names1 = {"PSY101","PHIL101","CHEM101","ECE101","MKT101"};
+        int [] grades1 = {99, 85, 75, 56, 69};
+        
+        String [] names2 = {"COUN201","SCN201","MKT201","INF201","PETE201"};
+        int [] grades2 = {68, 91, 79, 95, 70};
+        
+        String [] names3 = {"NUTR101","CSD101","PUB101","ENGL101","MATH101"};
+        int [] grades3 = {65, 100, 83, 75, 99};
+        
+        String [] names4 = {"HPS201","HAA201","CHME201","SOCY201","HSP201"};
+        int [] grades4 = {100, 61, 63, 61, 91};
+        
+        String [] names5 = {"FN301","ECON301","GRE301","MGMT301","ENTR301"};
+        int [] grades5 = {80, 69, 71, 75, 85};
+        
+        String [] names6 = {"MATH101","AG101","PSL101","ENGL101","CHEM101"};
+        int [] grades6 = {87, 81, 100, 70, 70};
+        
+        String [] names7 = {"ENGR201","TLL201","HIST201","STAT201","BAD201"};
+        int [] grades7 = {82, 93, 100, 82, 67};
+        
+        String [] names8 = {"EDHL101","GERM101","GLST101","HIST101","GEOG101"};
+        int [] grades8 = {99, 57, 93, 65, 77};
+        
+        String [] names9 = {"ECE101","MKT101","HAA101","BIOL101","PUB101"};
+        int [] grades9 = {74, 82, 68, 87, 80};
+        
+        String [] names10 = {"ENGL301","MATH301","COUN301","PSY301","AG301"};
+        int [] grades10 = {81, 70, 60, 93, 86};
+        
+        String [] names11 = {"FILM201","FREN201","HAA201","COMM201","IRI201"};
+        int [] grades11 = {77, 81, 73, 70, 79};
+        
+        String [] names12 = {"GSWS101","ASTR101","VIE101","BUS101","CRIM101"};
+        int [] grades12 = {61, 92, 99, 97, 76};
+        
+        String [] names13 = {"EDRE101","SPCH101","CLAS101","PLS101","ME101"};
+        int [] grades13 = {92, 58, 88, 79, 83};
+        
+        String [] names14 = {"ENTR201","CHEM201","PETE201","PUB201","PSL201"};
+        int [] grades14 = {57, 84, 71, 82, 84};
+        
+        String [] names15 = {"IRI301","GLST301","ECE301","EDHL301","VIE301"};
+        int [] grades15 = {84, 62, 91, 81, 89};
+        
+        String [] names16 = {"MATH101","CHDE101","PSY101","ENGL101","HIST101"};
+        int [] grades16 = {92, 84, 70, 81, 93};
         
         //The system for outputing the results
         if(studentID % 17 == 0){
@@ -23,20 +73,20 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < grades0.length; i++){
                 System.out.print(grades0[i] + "\t\t");
                 if (grades0[i] < 60){
-                    letters0[i] = 'F';
+                    letters[i] = 'F';
                 } else if (grades0[i] < 70){
-                    letters0[i] = 'D';
+                    letters[i] = 'D';
                 } else if (grades0[i] < 80){
-                    letters0[i] = 'C';
+                    letters[i] = 'C';
                 } else if (grades0[i] < 90){
-                    letters0[i] = 'B';
+                    letters[i] = 'B';
                 } else {
-                    letters0[i] = 'A';
+                    letters[i] = 'A';
                 }
             }
             System.out.println("");
             for(int i = 0; i < names0.length; i++){
-                System.out.print(letters0[i] + "\t\t");
+                System.out.print(letters[i] + "\t\t");
             }
         }
     }
