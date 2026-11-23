@@ -10,7 +10,6 @@ public class MyStudentGradeAndAcidemicStandingSystem {
         
         //Each value will have 3 arrays a string array for the class names, an int array for numerical grades, and a cha array for letter grades
         //The letter grade can be calculated latter based on the number grades
-        // No grades lower than 56
         char[] letters = {'A','A','A','A','A'};
         
         String [] names0 = {"ART101","BIOL101","CSCI101","GEOG101","HIST101"};
@@ -86,6 +85,374 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             }
             System.out.println("");
             for(int i = 0; i < names0.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 1){
+            for(int i = 0; i < names1.length; i++){
+                System.out.print(names1[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades1.length; i++){
+                System.out.print(grades1[i] + "\t\t");
+                if (grades1[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades1[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades1[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades1[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names1.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 2){
+            for(int i = 0; i < names2.length; i++){
+                System.out.print(names2[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades2.length; i++){
+                System.out.print(grades2[i] + "\t\t");
+                if (grades2[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades2[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades2[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades2[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names2.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 3){
+            for(int i = 0; i < names3.length; i++){
+                System.out.print(names3[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades3.length; i++){
+                System.out.print(grades3[i] + "\t\t");
+                if (grades3[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades3[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades3[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades3[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names3.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 4){
+            for(int i = 0; i < names4.length; i++){
+                System.out.print(names4[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades4.length; i++){
+                System.out.print(grades4[i] + "\t\t");
+                if (grades4[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades4[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades4[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades4[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names4.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 5){
+            for(int i = 0; i < names5.length; i++){
+                System.out.print(names5[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades5.length; i++){
+                System.out.print(grades5[i] + "\t\t");
+                if (grades5[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades5[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades5[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades5[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names5.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 6){
+            for(int i = 0; i < names6.length; i++){
+                System.out.print(names6[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades6.length; i++){
+                System.out.print(grades6[i] + "\t\t");
+                if (grades6[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades6[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades6[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades6[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names6.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 7){
+            for(int i = 0; i < names7.length; i++){
+                System.out.print(names7[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades7.length; i++){
+                System.out.print(grades7[i] + "\t\t");
+                if (grades7[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades7[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades7[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades7[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names7.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 8){
+            for(int i = 0; i < names8.length; i++){
+                System.out.print(names8[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades8.length; i++){
+                System.out.print(grades8[i] + "\t\t");
+                if (grades8[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades8[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades8[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades8[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names8.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 9){
+            for(int i = 0; i < names9.length; i++){
+                System.out.print(names9[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades9.length; i++){
+                System.out.print(grades9[i] + "\t\t");
+                if (grades9[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades9[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades9[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades9[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names9.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 10){
+            for(int i = 0; i < names10.length; i++){
+                System.out.print(names10[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades10.length; i++){
+                System.out.print(grades10[i] + "\t\t");
+                if (grades10[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades10[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades10[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades10[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names10.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 11){
+            for(int i = 0; i < names11.length; i++){
+                System.out.print(names11[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades11.length; i++){
+                System.out.print(grades11[i] + "\t\t");
+                if (grades11[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades11[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades11[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades11[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names11.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 12){
+            for(int i = 0; i < names12.length; i++){
+                System.out.print(names12[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades12.length; i++){
+                System.out.print(grades12[i] + "\t\t");
+                if (grades12[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades12[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades12[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades12[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names12.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 13){
+            for(int i = 0; i < names13.length; i++){
+                System.out.print(names13[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades13.length; i++){
+                System.out.print(grades13[i] + "\t\t");
+                if (grades13[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades13[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades13[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades13[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names13.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 14){
+            for(int i = 0; i < names14.length; i++){
+                System.out.print(names14[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades14.length; i++){
+                System.out.print(grades14[i] + "\t\t");
+                if (grades0[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades14[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades14[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades14[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names14.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 15){
+            for(int i = 0; i < names15.length; i++){
+                System.out.print(names15[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades15.length; i++){
+                System.out.print(grades15[i] + "\t\t");
+                if (grades15[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades15[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades15[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades15[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names15.length; i++){
+                System.out.print(letters[i] + "\t\t");
+            }
+        } else if(studentID % 17 == 16){
+            for(int i = 0; i < names16.length; i++){
+                System.out.print(names16[i] + "\t");
+            }
+            System.out.println("");
+            for(int i = 0; i < grades16.length; i++){
+                System.out.print(grades16[i] + "\t\t");
+                if (grades0[i] < 60){
+                    letters[i] = 'F';
+                } else if (grades16[i] < 70){
+                    letters[i] = 'D';
+                } else if (grades16[i] < 80){
+                    letters[i] = 'C';
+                } else if (grades16[i] < 90){
+                    letters[i] = 'B';
+                } else {
+                    letters[i] = 'A';
+                }
+            }
+            System.out.println("");
+            for(int i = 0; i < names16.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
         }
