@@ -2,14 +2,32 @@ import java.util.Scanner;
 
 public class MyStudentGradeAndAcidemicStandingSystem {
     
+    public static double calcGPA(int[] grades){
+        
+        double average = 0;
+        double gpa = 0;
+        
+        for(int i = 0; i < grades.length; i++){
+            average = average + grades[i];
+        }
+        average = average / grades.length;
+        gpa = (average / 100.0) * 4.0;
+        gpa = gpa * 100;
+        gpa = Math.round(gpa);
+        gpa = gpa / 100;
+        return gpa;
+    }
+    
     public static void main(String args[]) {
+        int studentID = 0;
+        double gpa = 0;
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter your student ID: ");
-        int studentID = input.nextInt();
+        System.out.print("Enter your 7 digit student ID number: ");
+        if (input.hasNextInt()){
+        studentID = input.nextInt();
+        }
         System.out.println("***************************************");
         
-        //Each value will have 3 arrays a string array for the class names, an int array for numerical grades, and a cha array for letter grades
-        //The letter grade can be calculated latter based on the number grades
         char[] letters = {'A','A','A','A','A'};
         
         String [] names0 = {"ART101","BIOL101","CSCI101","GEOG101","HIST101"};
@@ -64,7 +82,12 @@ public class MyStudentGradeAndAcidemicStandingSystem {
         int [] grades16 = {92, 84, 70, 81, 93};
         
         //The system for outputing the results
+        
+    if(studentID < 1000000 || studentID > 9999999){
+        System.out.println("Invalid Student ID Number");
+    } else{
         if(studentID % 17 == 0){
+            gpa = calcGPA(grades0);
             for(int i = 0; i < names0.length; i++){
                 System.out.print(names0[i] + "\t");
             }
@@ -87,7 +110,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names0.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 1){
+            gpa = calcGPA(grades1);
             for(int i = 0; i < names1.length; i++){
                 System.out.print(names1[i] + "\t");
             }
@@ -110,7 +136,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names1.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 2){
+            gpa = calcGPA(grades2);
             for(int i = 0; i < names2.length; i++){
                 System.out.print(names2[i] + "\t");
             }
@@ -133,7 +162,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names2.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 3){
+            gpa = calcGPA(grades3);
             for(int i = 0; i < names3.length; i++){
                 System.out.print(names3[i] + "\t");
             }
@@ -156,7 +188,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names3.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 4){
+            gpa = calcGPA(grades4);
             for(int i = 0; i < names4.length; i++){
                 System.out.print(names4[i] + "\t");
             }
@@ -179,7 +214,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names4.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 5){
+            gpa = calcGPA(grades5);
             for(int i = 0; i < names5.length; i++){
                 System.out.print(names5[i] + "\t");
             }
@@ -202,7 +240,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names5.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 6){
+            gpa = calcGPA(grades6);
             for(int i = 0; i < names6.length; i++){
                 System.out.print(names6[i] + "\t");
             }
@@ -225,7 +266,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names6.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 7){
+            gpa = calcGPA(grades7);
             for(int i = 0; i < names7.length; i++){
                 System.out.print(names7[i] + "\t");
             }
@@ -248,7 +292,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names7.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 8){
+            gpa = calcGPA(grades8);
             for(int i = 0; i < names8.length; i++){
                 System.out.print(names8[i] + "\t");
             }
@@ -271,7 +318,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names8.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 9){
+            gpa = calcGPA(grades9);
             for(int i = 0; i < names9.length; i++){
                 System.out.print(names9[i] + "\t");
             }
@@ -294,7 +344,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names9.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 10){
+            gpa = calcGPA(grades10);
             for(int i = 0; i < names10.length; i++){
                 System.out.print(names10[i] + "\t");
             }
@@ -317,7 +370,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names10.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 11){
+            gpa = calcGPA(grades11);
             for(int i = 0; i < names11.length; i++){
                 System.out.print(names11[i] + "\t");
             }
@@ -340,7 +396,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names11.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 12){
+            gpa = calcGPA(grades12);
             for(int i = 0; i < names12.length; i++){
                 System.out.print(names12[i] + "\t");
             }
@@ -363,7 +422,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names12.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 13){
+            gpa = calcGPA(grades13);
             for(int i = 0; i < names13.length; i++){
                 System.out.print(names13[i] + "\t");
             }
@@ -386,7 +448,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names13.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 14){
+            gpa = calcGPA(grades14);
             for(int i = 0; i < names14.length; i++){
                 System.out.print(names14[i] + "\t");
             }
@@ -409,7 +474,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names14.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 15){
+            gpa = calcGPA(grades15);
             for(int i = 0; i < names15.length; i++){
                 System.out.print(names15[i] + "\t");
             }
@@ -432,7 +500,10 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names15.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         } else if(studentID % 17 == 16){
+            gpa = calcGPA(grades16);
             for(int i = 0; i < names16.length; i++){
                 System.out.print(names16[i] + "\t");
             }
@@ -455,6 +526,9 @@ public class MyStudentGradeAndAcidemicStandingSystem {
             for(int i = 0; i < names16.length; i++){
                 System.out.print(letters[i] + "\t\t");
             }
+            System.out.println("");
+            System.out.println("Gpa: " + gpa);
         }
+    }
     }
 }
